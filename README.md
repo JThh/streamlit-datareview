@@ -1,2 +1,2 @@
-# EDA-learning-by-doing
-A propagative EDA web application
+# Propagative Learning App on Exploratory Data Analysis
+This web app propagates the EDA process on the dataset credited from [Kaggle website](https://www.kaggle.com/gpreda/covid19-tweets)
