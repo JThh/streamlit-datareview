@@ -23,7 +23,7 @@ st.set_page_config(
 )
 
 DATA_URL = (
-    "./covid19_tweets.csv"
+    "./covid19_tweets_cut.csv"
 )
 
 st.title("Exploratory Data Analysis of Tweets about Covid-19 🦠")
