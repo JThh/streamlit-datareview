@@ -313,8 +313,7 @@ with st.beta_expander('(Optional) Train the model'):
 
     text = df.text.values
 
-    @st.cache(persist=True)
-    @st.cache(show_spinner=False)
+    @st.cache(persist=True,show_spinner=False)
     def vectorize(values):
         vec = TfidfVectorizer(stop_words="english")
         vec.fit(values)
@@ -355,6 +354,7 @@ with st.beta_expander('Now to test your own data'):
         new_text = np.append(text, _input)
         with st.spinner('Ready in less than a minute...'):
             result = fit(new_text)
+        st.balloons()
         k = result[-1]
         if printornot:
             st.subheader(f'Your input text is classified into Cluster {k}')
