@@ -289,7 +289,7 @@ with st.beta_expander('Text analysis'):
     countries = df.groupby(['user_location'])['text'].count().reset_index()
     countries.columns = ['location', 'count']
     countries = countries.sort_values(['count'],ascending=False)
-    selected_country = st.selectbox('Select the locations you are interested in',[location for location in countries.location],key='select')
+    selected_country = st.selectbox('Select the location you are interested in',[location for location in countries.location],key='select')
     ds = ds[ds['user_location'] == selected_country]
     if st.checkbox('Verified user only',False):
         ds = ds[ds['user_verified'] == 1]
